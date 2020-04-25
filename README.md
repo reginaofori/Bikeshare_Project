@@ -15,6 +15,12 @@ __In this project the data sets used were:__
 -washington.csv
 
 
+__To complete this project the general software used were:__
+1.  Python 3, NumPy, and pandas installed using Anaconda
+2. A text editor, like Sublime or Atom.
+3. A terminal application (Terminal on Mac and Linux or Cygwin on Windows).
+
+
 
 ![image](https://user-images.githubusercontent.com/52751600/80293268-975e6980-874d-11ea-9dfa-bb871e25db2d.png)
 
