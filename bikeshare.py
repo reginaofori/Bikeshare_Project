@@ -92,10 +92,9 @@ def time_stats(df):
                     start_time = time.time()
                     # display the most common month
                     most_common_month = df['month'].mode()[0]
-                    print("The most common month is :", most_common_month)
-                    # display the most common day of week
                     most_common_day_of_week = df['day_of_week'].mode()[0]
-                    print("The most common day of week is :", most_common_day_of_week)
+                    # display the most common day of week
+                    print("The most common month and day of the week are {} and {}:".format(most_common_month,most_common_day_of_week)
                     # display the most common start hour
                     def hr_func(ts):
                         return ts.hour
@@ -119,12 +118,10 @@ def station_stats(df):
                     #displaying  most commonly used start station
                     most_used_start_station = df['Start Station'].mode()[0]
                     print("The most commonly used start station :", most_used_start_station)
-                    print()
                     #displaying most commonly used end station
                     most_used_end_station = df['End Station'].mode()[0]
-                    print()
                     #displaying the  most frequent combination of start station and end station trip
-                    print("The most commonly used start station and end station are : {}, {}".format(most_used_start_station,most_used_end_station))
+                    print("\nThe most commonly used start station and end station are : {}, {}".format(most_used_start_station,most_used_end_station))
                     print("\nThis took %s seconds." % (time.time() - start_time))
                     print('-'*40)
                     break
@@ -156,9 +153,8 @@ def user_stats(df,user_city):
                 if user_stat == 'yes' and user_city == 'Washington':
                     print('Here you go!!!!!!\n')
                     #Displaying the counts of user types
-                    print()
                     user_counts = df['User Type'].value_counts()
-                    print("The counts of user types in the chosen city is:",user_counts)
+                    print("\n\nThe counts of user types in the chosen city is:",user_counts)
                     print("\nThis took %s seconds." % (time.time() - start_time))
                     break
 
