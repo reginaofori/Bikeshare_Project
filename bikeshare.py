@@ -158,8 +158,7 @@ def user_stats(df,user_city):
                     print("\nThis took %s seconds." % (time.time() - start_time))
                     break
 
-                if user_stat == 'yes' and user_city == 'Chicago' or user_city == 'New York City':
-
+                if user_stat == 'yes' and user_city != "Washington"
                     #Displaying the  counts of gender
                     print('Here you go!!!!!!\n')
                     user_counts = df['User Type'].value_counts()
