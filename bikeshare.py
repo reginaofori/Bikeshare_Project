@@ -31,6 +31,7 @@ def get_filters():
     print('Hello! Let\'s explore some US bikeshare data!')
 
             #Getting User input for city,day,month
+            #Loop to handle user invalid inputs
     while True:
             user_city = input('Which city would you like to see data for Chicago/New York City/Washington\nAns:').title()
             cities = ['Chicago','New York City','Washington']
@@ -155,7 +156,7 @@ def user_stats(df,user_city):
             while True:
                 if user_stat == 'yes' and user_city == 'Washington':
                     print('Here you go!!!!!!\n')
-                    #Displaying the counts of user types
+                    #Displaying the counts of user types for only Washington
                     print()
                     user_counts = df['User Type'].value_counts()
                     print("The counts of user types in the chosen city is:",user_counts)
@@ -164,7 +165,7 @@ def user_stats(df,user_city):
 
                 if user_stat == 'yes' and user_city == 'Chicago' or user_city == 'New York City':
 
-                    #Displaying the  counts of gender
+                    #Displaying the  counts of user types and gender for chicago and New York City
                     print('Here you go!!!!!!\n')
                     user_counts = df['User Type'].value_counts()
                     print("The counts of user types in the chosen city is:",user_counts)
